@@ -12,12 +12,11 @@ class App extends Component {
     loading: false,
     query: '',
     results: [],
-    errorMessage: ''
   }
 
   handleInputChange = (event) => {
     const query = event.target.value;
-    this.setState({query: query, loading: true, errorMessage: ''})
+    this.setState({query: query, loading: true})
   }
 
 
@@ -56,7 +55,7 @@ class App extends Component {
                 onChange={this.handleInputChange}
               />
             </label>
-            {results}
+            {results.length === 0 && query.length > 0 ? <p className="instructionText">sorry, no results!</p> : results}
           </div>
         </main>
       </div>
