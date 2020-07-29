@@ -6,6 +6,12 @@ $pigeon0: #EFEFEF;
 $pigeon5: #666666;
 $pigeon7: #333333;
 
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
 header {
   height: 64px;
   width: 100vw;
@@ -16,5 +22,34 @@ header {
     height: 24px;
     margin: 20px 132px 0 20px;
   }
-  
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  .instructions {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 96px;
+    h1 {
+      font-family: 'Georgia', 'Helvetica', sans-serif;
+      color: $jay8;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: .03em;
+      line-height: 1.1em;
+    }
+    .instructionText {
+      font-family: 'Helvetica', sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      line-height: 1.5em;
+    }
+  }
+}
+
