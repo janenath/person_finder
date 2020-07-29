@@ -1,0 +1,20 @@
+//Colors
+$peacock4: #0addd7;
+$jay6: #1b3889;
+$jay8: #102261;
+$pigeon0: #EFEFEF;
+$pigeon5: #666666;
+$pigeon7: #333333;
+
+header {
+  height: 64px;
+  width: 100vw;
+  border-top: 3.43px solid $peacock4;
+  box-shadow: 0px 1px 0px 0px #EFEFEF;
+  .logo {
+    width: 60.39px;
+    height: 24px;
+    margin: 20px 132px 0 20px;
+  }
+  
+}
