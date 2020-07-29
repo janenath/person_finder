@@ -6,6 +6,8 @@ import './App.scss';
 import Header from './components/Header';
 import Card from './components/Card';
 
+import data from './components/data/data.json';
+
 class App extends Component {
   state = {
     loading: false,
@@ -19,12 +21,21 @@ class App extends Component {
     this.setState({query: query, loading: true, errorMessage: ''})
   }
 
-  getSearchResults = (query) => {
 
-  }
 
   render() {
     const { query } = this.state;
+    const results = data.filter((data) => {
+        if(this.state.query == '')
+          return ''
+        else if (data.name.toLowerCase().includes(this.state.query.toLowerCase())) {
+          return data
+        }
+    }).map(data => {
+      return (
+        <Card data={data}/>
+      )
+    })
     return (
       <div className="App">
         <Header/>
@@ -43,9 +54,7 @@ class App extends Component {
                 onChange={this.handleInputChange}
               />
             </label>
-            <Card/>
-            <Card/>
-            <Card/>
+            {results}
           </div>
         </main>
       </div>

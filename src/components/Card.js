@@ -2,14 +2,16 @@ import React from 'react';
 
 
 class Card extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <div className="card">
-                <div className="avatar"></div>
+                <img className="avatar" src={this.props.data.avatar} alt="avatar"/>
                 <div className="personText">
-                    <h3 className="name">name goes here</h3>
-                    <p className="description">Partial traumatic metacarpophalangeal amputation of right little finger, subsequent encounter.
-Anything can go here</p>
+                    <h3 className="name">{this.props.data.name}</h3>
+                    <p className="description">{this.props.data.description}</p>
                 </div>
             </div>
         );
