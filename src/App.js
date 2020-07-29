@@ -37,6 +37,7 @@ class App extends Component {
         <Card data={data}/>
       )
     })
+
     return (
       <div className="App">
         <Header/>
