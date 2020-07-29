@@ -5,12 +5,15 @@ $jay8: #102261;
 $pigeon0: #EFEFEF;
 $pigeon5: #666666;
 $pigeon7: #333333;
+$light-grey: #c4c4c4;
 
 .App {
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  font-family: 'Helvetica', sans-serif;
+
 }
 header {
   height: 64px;
@@ -30,7 +33,7 @@ main {
   width: 100%;
   justify-content: center;
   align-items: center;
-
+  box-sizing: border-box;
   .instructions {
     display: flex;
     flex-direction: column;
@@ -45,11 +48,58 @@ main {
       line-height: 1.1em;
     }
     .instructionText {
-      font-family: 'Helvetica', sans-serif;
       font-size: 16px;
       letter-spacing: 0.02em;
       line-height: 1.5em;
     }
   }
+
+
+  .search {
+    width: 40%;
+    input {
+      width: 100%;
+      height: 40px;
+      margin: 40px 0;
+      padding: 0 0 0 16px;
+      border: 0;
+      border-radius: 4px;
+      background-color: $pigeon0;
+    
+    }
+    .card {
+      display: flex;
+      width: 100%;
+      height: 96px;
+      margin-bottom: 24px;
+      .avatar {
+        min-width: 96px;
+        height: 96px;
+        background-color: $light-grey;
+      }
+      .personText {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5em;
+        justify-content: flex-start;
+        margin-left: 24px;
+        .name {
+          font-size: 16px;
+          font-weight: bold;
+          letter-spacing: -.025em;
+          color: $pigeon7;
+          margin: inherit;
+          margin-bottom: 8px;
+        }
+        .description {
+          font-size: 14px;
+          color: $pigeon5;
+          letter-spacing: -.015em;
+          margin: inherit;
+        }
+      }
+    }
+  }
+
 }
 
