@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactLoading from 'react-loading';
 
 import './App.scss';
 
@@ -26,10 +25,12 @@ class App extends Component {
   render() {
     const { query } = this.state;
     const results = data.filter((data) => {
-        if(this.state.query == '')
+        if(this.state.query === '')
           return ''
         else if (data.name.toLowerCase().includes(this.state.query.toLowerCase())) {
           return data
+        } else {
+          return ''
         }
     }).map(data => {
       return (
