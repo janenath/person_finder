@@ -45,6 +45,9 @@ main {
     @media (max-width: 650px) {
       width: 80%;
     }
+    @media (max-width: 400px) {
+      width: 90%;
+    }
     h1 {
       font-family: 'Georgia', 'Helvetica', sans-serif;
       color: $jay8;
@@ -70,6 +73,9 @@ main {
     @media (max-width: 650px) {
       width: 80%;
     }
+    @media (max-width: 400px) {
+      width: 90%;
+    }
     input {
       width: 100%;
       height: 40px;
@@ -78,6 +84,7 @@ main {
       border: 0;
       border-radius: 4px;
       background-color: $pigeon0;
+      box-sizing:  border-box;
     }
     .card {
       display: flex;
